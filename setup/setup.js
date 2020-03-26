@@ -29,7 +29,9 @@ function setup() {
 function runSetupAsync() {
 	return exec("yarn", ["install"], "Install dependencies")
 		.then(() => exec("yarn", ["link"], "Create webpack symlink"))
-		.then(() => exec("yarn", ["link", "webpack"], "Link webpack into itself"));
+		.then(() =>
+			exec("yarn", ["link", "@duplotech/webpack"], "Link webpack into itself")
+		);
 }
 
 function checkSymlinkExistsAsync() {

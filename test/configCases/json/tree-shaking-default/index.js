@@ -50,7 +50,7 @@ it("should not have unused keys in bundle", () => {
 });
 
 it("should tree-shake package.json too", () => {
-	expect(packageJson.name).toBe("webpack");
+	expect(packageJson.name).toBe("@duplotech/webpack");
 	expect(packageJson.repository.url).toBe(
 		"https://github.com/webpack/webpack.git"
 	);
